@@ -18,18 +18,19 @@ public class Babbling {
 
 		for (int i = 0; i < testTalk.length; i++) {
 			System.out.print("발음 입력 (영어로): ");
-			String blah = sc.next();
-			CharacterIterator it = new StringCharacterIterator(blah);
-			while (true) {
-				if (blah.length() >= 1 && blah.length() <= 15 && 'a' <= it.current() && it.current() <= 'z') {
-					testTalk[i] = blah;
-					break;
-				} 
-
-			}
-
+			testTalk[i] = sc.next();
 		}
-		System.out.println(Arrays.toString(testTalk));
+		int cnt = 0;
+		for(String a : testTalk) { 
+			for(String b : babbling) {
+				if(a.equals(b)) {
+					cnt++;
+				}else if(a.indexOf(b))){
+					
+				}
+			}
+		}
+		System.out.println(cnt);
 
 	}
 
