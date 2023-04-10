@@ -32,7 +32,7 @@ public class RunningRace {
 	public static String[] solution(String[] players, String[] callings) {
 		for(int cIdx = 0; cIdx<callings.length; cIdx++) {
 			for(int pIdx=0; pIdx<players.length; pIdx++) {
-				 if(callings[cIdx] == players[pIdx]) {
+				 if(callings[cIdx].equals(players[pIdx])) {
 					 String temp = players[pIdx-1];
 					 players[pIdx-1] = players[pIdx];
 					 players[pIdx] = temp;		
